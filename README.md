@@ -1,34 +1,9 @@
-# JavaScript - Switch/Case, For Loop, Continue
+# JavaScript - For Loop, Continue
 
 ## Topics Covered
-- `switch/case` - conditional branching
 - `for` loop - repeating code
 - `continue` - skipping iterations
-- `document.write` - writing to the page
-
----
-
-## switch/case
-
-Used to compare a variable against multiple values.
-
-```javascript
-let day = prompt('Enter a day');
-
-switch(day) {
-    case 'Monday':
-        document.write('1st day');
-        break;
-    case 'Friday':
-        document.write('5th day');
-        break;
-    default:
-        document.write('Invalid day');
-}
-```
-
-> ⚠️ Always use `break` to prevent fall-through.
-> ⚠️ Use `n *= 1` to convert prompt input from string to number.
+- Math operations inside loops (sum, product, squares)
 
 ---
 
@@ -37,7 +12,13 @@ switch(day) {
 Used to repeat code a specific number of times.
 
 ```javascript
-for (let i = 1; i <= 10; i++) {
+// Syntax
+for(start; condition; step) {
+    // code
+}
+
+// Example: print 1 to 5
+for(let i = 1; i <= 5; i++) {
     document.write(i + ' ');
 }
 ```
@@ -49,41 +30,68 @@ for (let i = 1; i <= 10; i++) {
 Skips the current iteration and moves to the next one.
 
 ```javascript
-for (let i = 1; i <= 20; i++) {
-    if (i % 3 === 0) continue; // skip multiples of 3
+// Print odd numbers only
+for(let i = 1; i <= 10; i++) {
+    if(i % 2 === 0) continue; // skip even numbers
     document.write(i + ' ');
 }
-// Output: 1 2 4 5 7 8 10 11 13 14 16 17 19 20
+// Output: 1 3 5 7 9
 ```
+
+---
+
+## Key Rules
+
+| | Sum | Product |
+|---|---|---|
+| Start value | `sum = 0` | `sum = 1` |
+| Operation | `sum += i` | `sum *= i` |
+
+> ⚠️ Product must start from 1! If it starts from 0 → result is always 0!
 
 ---
 
 ## Tasks Completed
 
 | # | Task | Topic |
-|---|------|-------|
-| 1 | Enter a number (1-3) → print First, Second, Third | switch/case |
-| 2 | Grade (1-5) → print Fail, Satisfactory, Good, Excellent | for + switch |
-| 3 | Month number → print season (Winter, Spring, Summer, Autumn) | switch/case |
-| 4 | Month number → print number of days in that month | switch/case |
-| 5 | Two numbers + operation → calculate result (calculator) | switch/case |
-| 6 | Grade → print scholarship amount | switch/case |
-| 7 | Numbers 1-20, skip multiples of 3 | for + continue |
-| 8 | Days array → print Workday or Weekend | for + switch |
+|---|---|---|
+| 1 | Print k number n times | for loop |
+| 2 | Print numbers between a and b (a and b excluded) | for loop |
+| 3 | Print numbers between a and b in descending order | for loop (i--) |
+| 4 | Print candy prices from 1kg to 10kg | for loop |
+| 5 | Print candy prices from 0.1kg to 1kg | for loop (i/10) |
+| 6 | Print candy prices: 1.2kg, 1.4kg ... 2kg | for loop (i+=2) |
+| 7 | Sum of all numbers from a to b | for + sum |
+| 8 | Product of all numbers from a to b | for + product |
+| 9 | Sum of squares from a to b | for + i**2 |
+| 10 | Calculate S = 1/1 + 1/2 + ... + 1/n | for + 1/i |
+| 11 | Print odd numbers from 1 to n | for + continue |
+| 12 | Print even numbers from 1 to n | for + continue |
 
 ---
 
-## Key Concepts
+## Useful Tips
 
-| Concept | Description |
-|---------|-------------|
-| `break` | Exits the switch/case block |
-| `default` | Runs when no case matches |
-| `continue` | Skips current loop iteration |
-| `n *= 1` | Converts string to number |
-| `fall-through` | Multiple cases sharing one result |
+```javascript
+// String to number
+n *= 1;
+// or
+n = Number(n);
+
+// Square
+i ** 2  // or i * i
+
+// Odd check
+i % 2 !== 0  // true if odd
+
+// Even check
+i % 2 === 0  // true if even
+
+// Avoid floating point issues
+i.toFixed(1) // 0.1, 0.2 ... not 0.10000000001
+```
 
 ---
 
 ## Author Gavharoy
-*JavaScript learning journey - Day 2*
+*JavaScript learning journey - Day 3*
