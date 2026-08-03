@@ -35,3 +35,7 @@ A calculator built with vanilla JavaScript and DOM manipulation.
 
 **Gavharoy Boltaboyeva**
 JavaScript learning journey 🇺🇿
+
+## Notes
+
+- **Lesson 1** demonstrates document.write() and lert(). Note: document.write() clears the entire page after it has already loaded (e.g. after responding to a prompt) — this is expected browser behavior and is part of what the lesson teaches, not a bug.

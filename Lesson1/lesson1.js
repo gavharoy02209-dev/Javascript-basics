@@ -1,3 +1,8 @@
+// NOTE: document.write() clears the entire page after it has fully loaded
+// (e.g. after a prompt() response). This is expected JavaScript behavior,
+// not a bug — this lesson demonstrates why innerHTML is usually preferred instead.
+
+
 // ==== Task-1 Variables ====
 /*
 let name = 'Gavharoy';
